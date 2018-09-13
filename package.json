@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-		"ios": "react-native run-ios",
-		"ios:device": "react-native run-ios --device",
-		"android": "react-native run-android",
+    "ios": "react-native run-ios --simulator='iPhone X'",
+    "ios:device": "react-native run-ios --device",
+    "android": "react-native run-android",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.5.0",
-    "react-native": "0.57.0"
+    "react-native": "0.57.0",
+    "react-navigation": "^2.14.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
