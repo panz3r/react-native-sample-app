@@ -1,4 +1,4 @@
-package com.rnwhiteapp;
+package io.github.panz3r.rnsample;
 
 import android.app.Application;
 
