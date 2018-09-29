@@ -1,7 +1,25 @@
 {
-  "name": "RNWhiteApp",
+  "name": "react-native-sample-app",
   "version": "0.0.1",
+  "description": "A sample RN app to showcase some custom components",
+  "author": {
+    "name": "Mattia Panzeri",
+    "email": "mattia.panzeri93@gmail.com",
+    "url": "https://github.com/panz3r"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react-native"
+  ],
   "private": true,
+  "homepage": "https://github.com/panz3r/react-native-sample-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panz3r/react-native-sample-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panz3r/react-native-sample-app/issues"
+  },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios --simulator='iPhone X'",
@@ -14,15 +32,15 @@
     "lodash": "^4.17.11",
     "native-base": "^2.8.0",
     "react": "16.5.0",
-    "react-native": "0.57.0",
+    "react-native": "0.57.1",
     "react-native-languages": "^3.0.0",
-    "react-navigation": "^2.14.0"
+    "react-navigation": "^2.17.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
     "flow-bin": "0.78",
     "jest": "23.6.0",
-    "metro-react-native-babel-preset": "0.45.1",
+    "metro-react-native-babel-preset": "0.45.6",
     "react-test-renderer": "16.5.0"
   },
   "jest": {
