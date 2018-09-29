@@ -1,22 +1,17 @@
-// @flow
-
 import React, { PureComponent } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu'
-});
+import { withT } from '../../i18n';
 
-type Props = {};
-
-export default class HomeScreen extends PureComponent<Props> {
+class HomeScreen extends PureComponent {
   render() {
+    const { t } = this.props;
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.welcome}>{t('welcome')}</Text>
+        <Text style={styles.instructions}>{t('get started')}</Text>
+        <Text style={styles.instructions}>{t(`instructions ${Platform.OS}`)}</Text>
       </View>
     );
   }
@@ -40,3 +35,5 @@ const styles = StyleSheet.create({
     marginBottom: 5
   }
 });
+
+export default withT(HomeScreen);
