@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text } from 'react-native';
 
+import { ScreenContainer } from '../../common';
 import { withT } from '../../i18n';
 
 class HomeScreen extends PureComponent {
@@ -8,11 +9,11 @@ class HomeScreen extends PureComponent {
     const { t } = this.props;
 
     return (
-      <View style={styles.container}>
+      <ScreenContainer noHeader style={styles.container}>
         <Text style={styles.welcome}>{t('welcome')}</Text>
         <Text style={styles.instructions}>{t('get started')}</Text>
         <Text style={styles.instructions}>{t(`instructions ${Platform.OS}`)}</Text>
-      </View>
+      </ScreenContainer>
     );
   }
 }
@@ -21,8 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    alignItems: 'center'
   },
   welcome: {
     fontSize: 20,
