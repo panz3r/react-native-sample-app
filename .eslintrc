@@ -1,0 +1,73 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "react-native", "flowtype"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:flowtype/recommended"],
+  "env": {
+    "react-native/react-native": true
+  },
+  "rules": {
+    "array-callback-return": "error",
+    "default-case": "error",
+    "eqeqeq": "error",
+    "implicit-arrow-linebreak": "error",
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false,
+        "afterColon": true,
+        "mode": "strict"
+      }
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "lines-between-class-members": "error",
+    "no-console": "off",
+    "no-duplicate-imports": "error",
+    "no-else-return": "error",
+    "no-empty-function": "error",
+    "no-lonely-if": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+    "no-template-curly-in-string": "error",
+    "no-undefined": "error",
+    "no-var": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "require-await": "error",
+    "semi": ["error", "always"],
+    "react/prop-types": [0],
+    "react/display-name": [0, { "ignoreTranspilerName": false }],
+    "react/jsx-closing-tag-location": 1,
+    "react/jsx-closing-bracket-location": [
+      1,
+      {
+        "nonEmpty": "tag-aligned",
+        "selfClosing": "line-aligned"
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      1,
+      {
+        "declaration": "parens",
+        "assignment": "parens",
+        "return": "parens",
+        "arrow": "parens",
+        "condition": "parens",
+        "logical": "parens",
+        "prop": "parens"
+      }
+    ],
+    "react-native/no-unused-styles": 2,
+    "react-native/no-inline-styles": 2
+  }
+}
