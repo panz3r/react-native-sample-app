@@ -4,6 +4,7 @@ import { StyleSheet, Text } from 'react-native';
 import { DEBUG } from 'react-native-dotenv';
 
 import { withT } from '~/i18n';
+import { Logger } from '~/utils';
 
 class ScreenContainer extends PureComponent {
   _handleClick = actionId => {
@@ -13,7 +14,8 @@ class ScreenContainer extends PureComponent {
   _goBack = () => this._handleClick('back');
 
   render() {
-    console.log('ScreenContainer', 'render');
+    Logger.debug('ScreenContainer: render');
+
     const {
       children,
       headerText,

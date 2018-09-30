@@ -3,9 +3,12 @@ import { Platform, StyleSheet, Text } from 'react-native';
 
 import { ScreenContainer } from '~/common';
 import { withT } from '~/i18n';
+import { Logger } from '~/utils';
 
 class HomeScreen extends PureComponent {
   render() {
+    Logger.debug('HomeScreen: render');
+
     const { t } = this.props;
 
     return (
