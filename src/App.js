@@ -1,20 +1,46 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import { ActivityIndicator } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
+import { Provider } from 'react-redux';
 
+import { store, storeIsReady } from '~/state';
 import { Logger } from '~/utils';
 
 import RootStack from './screens';
 
 export default class App extends PureComponent<*, *> {
+  state = {
+    loading: true
+  };
+
   componentDidMount() {
-    SplashScreen.hide();
+    storeIsReady().then(() => {
+      this.setState(
+        {
+          loading: false
+        },
+        () => {
+          SplashScreen.hide();
+        }
+      );
+    });
   }
 
   render() {
     Logger.debug('HomeScreen: render');
 
-    return <RootStack />;
+    const { loading } = this.state;
+
+    if (loading) {
+      return <ActivityIndicator />;
+    }
+
+    return (
+      <Provider store={store}>
+        <RootStack />
+      </Provider>
+    );
   }
 }
