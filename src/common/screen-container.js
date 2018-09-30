@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { DEBUG } from 'react-native-dotenv';
 
-import { withT } from '../i18n';
+import { withT } from '~/i18n';
 
 class ScreenContainer extends PureComponent {
   _handleClick = actionId => {
