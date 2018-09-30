@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Platform, StyleSheet, Text } from 'react-native';
 
-import { ScreenContainer } from '../../common';
-import { withT } from '../../i18n';
+import { ScreenContainer } from '~/common';
+import { withT } from '~/i18n';
 
 class HomeScreen extends PureComponent {
   render() {
