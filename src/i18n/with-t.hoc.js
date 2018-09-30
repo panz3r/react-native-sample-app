@@ -2,7 +2,7 @@ import React from 'react';
 
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
-import { translate, type TranslateFn } from './i18n';
+import { translate } from './i18n';
 
 export const withT = WrappedComponent => {
   class Enhanced extends React.PureComponent {

@@ -36,8 +36,7 @@ export const store = createStore(persistedReducer, applyMiddleware(...middleware
 
 export const persistor = persistStore(store);
 
-export const storeIsReady = () =>
-  new Promise(resolve => {
+export const storeIsReady = () => new Promise(resolve => {
     let _unsubscribe = null;
 
     const _handlePersistorState = () => {

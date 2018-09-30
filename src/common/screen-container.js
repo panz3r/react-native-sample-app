@@ -23,7 +23,6 @@ class ScreenContainer extends PureComponent {
       noPadding,
       noScroll,
       noTranslateText,
-      onAction,
       showBack,
       showLogout,
       style,
@@ -45,7 +44,7 @@ class ScreenContainer extends PureComponent {
             <Body>{!!headerText && <Title>{!noTranslateText ? t(headerText) : headerText}</Title>}</Body>
             <Right>
               {showLogout && (
-                <Button key="logoutButton" onPress={this.onAction} transparent>
+                <Button key="logoutButton" onPress={this._handleClick('logout')} transparent>
                   <Icon name="log-out" />
                 </Button>
               )}
