@@ -16,7 +16,8 @@
           {
             "rootPathSuffix": "src"
           }
-        ]
+        ],
+        ["transform-remove-console"]
       ]
     }
   }
