@@ -3,6 +3,7 @@ package io.github.panz3r.rnsample;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import io.sentry.RNSentryPackage;
 import com.reactcommunity.rnlanguages.RNLanguagesPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SplashScreenReactPackage(),
             new RNSentryPackage(),
             new RNLanguagesPackage()
       );
