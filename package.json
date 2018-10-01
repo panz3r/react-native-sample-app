@@ -21,10 +21,13 @@
     "url": "https://github.com/panz3r/react-native-sample-app/issues"
   },
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios": "react-native run-ios --simulator='iPhone X'",
-    "ios:device": "react-native run-ios --device",
-    "android": "react-native run-android",
+    "start:packager": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "start:android": "react-native run-android --no-packager",
+    "start:ios": "react-native run-ios --simulator='iPhone X' --no-packager",
+    "start:ios:device": "react-native run-ios --device --no-packager",
+    "android": "run-p start:packager start:android",
+    "ios": "run-p start:packager start:ios",
+    "ios:device": "run-p start:packager start:ios:device",
     "test": "jest",
     "lint": "eslint src/**/*.js",
     "assets:icons": "rn-toolbox icons",
