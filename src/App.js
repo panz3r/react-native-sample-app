@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import { ActivityIndicator } from 'react-native';
+import { Provider as InAppNotificationProvider } from 'react-native-in-app-notification';
 import SplashScreen from 'react-native-splash-screen';
 import { Provider } from 'react-redux';
 
@@ -38,9 +39,11 @@ export default class App extends PureComponent<*, *> {
     }
 
     return (
-      <Provider store={store}>
-        <RootStack />
-      </Provider>
+      <InAppNotificationProvider>
+        <Provider store={store}>
+          <RootStack />
+        </Provider>
+      </InAppNotificationProvider>
     );
   }
 }

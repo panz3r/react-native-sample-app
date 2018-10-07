@@ -5715,7 +5715,15 @@ react-native-easy-grid@0.2.0:
   dependencies:
     lodash "^4.11.1"
 
-react-native-iphone-x-helper@^1.0.1:
+react-native-in-app-notification@panz3r/react-native-in-app-notification#v3.0.0:
+  version "3.0.0"
+  resolved "https://codeload.github.com/panz3r/react-native-in-app-notification/tar.gz/ef39155d8703eb575af426129727d005af762fb6"
+  dependencies:
+    hoist-non-react-statics "^3.0.1"
+    react-native-iphone-x-helper "^1.2.0"
+    react-native-swipe-gestures "^1.0.2"
+
+react-native-iphone-x-helper@^1.0.1, react-native-iphone-x-helper@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.0.tgz#9f8a376eb00bc712115abff4420318a0063fa796"
   integrity sha512-xIeTo4s77wwKgBZLVRIZC9tM9/PkXS46Ul76NXmvmixEb3ZwqGdQesR3zRiLMOoIdfOURB6N9bba9po7+x9Bag==
@@ -5757,6 +5765,11 @@ react-native-splash-screen@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.1.1.tgz#1a4e46c9fdce53ff52af2a2cb4181788c4e30b30"
   integrity sha512-PU2YocOSGbLjL9Vgcq/cwMNuHHKNjjuPpa1IPMuWo+6EB/fSZ5VOmxSa7+eucQe3631s3NhGuk3eHKahU03a4Q==
+
+react-native-swipe-gestures@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.2.tgz#914e1a72a94bc55b322b4622a01103ab879296dd"
+  integrity sha1-kU4acqlLxVsyK0YioBEDq4eSlt0=
 
 react-native-tab-view@^0.0.77:
   version "0.0.77"
